@@ -1,0 +1,7 @@
+{
+  "htmlWhitespaceSensitivity": "ignore",
+  "endOfLine": "auto",
+  "semi": true,
+  "singleQuote": true,
+  "jsxBracketSameLine": false
+}
