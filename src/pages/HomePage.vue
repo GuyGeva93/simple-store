@@ -1,15 +1,15 @@
 <template>
-  <hello-world />
+  <AppHeader />
 </template>
 
 <script>
-import HelloWorld from '../components/HelloWorld';
-
+import AppHeader from '@/components/Home/AppHeader.vue';
 export default {
-  name: 'HomeView',
-
   components: {
-    HelloWorld,
+    AppHeader,
   },
 };
 </script>
+
+<style>
+</style>

@@ -10,26 +10,26 @@ const routes = [
     name: 'home',
     component: HomePage,
   },
-  {
-    path: '/store',
-    name: 'store',
-    component: HomePage,
-  },
-  {
-    path: '/cart',
-    name: 'cart',
-    component: HomePage,
-  },
-  {
-    path: '/checkout',
-    name: 'checkout',
-    component: HomePage,
-  },
-  {
-    path: '/thankyou',
-    name: 'thank-you',
-    component: HomePage,
-  },
+  // {
+  //   path: '/store',
+  //   name: 'store',
+  //   component: HomePage,
+  // },
+  // {
+  //   path: '/cart',
+  //   name: 'cart',
+  //   component: HomePage,
+  // },
+  // {
+  //   path: '/checkout',
+  //   name: 'checkout',
+  //   component: HomePage,
+  // },
+  // {
+  //   path: '/thankyou',
+  //   name: 'thank-you',
+  //   component: HomePage,
+  // },
   // {
   //   path: '/about',
   //   name: 'about',
