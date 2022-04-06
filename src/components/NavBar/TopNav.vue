@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container class="px-0">
     <v-app-bar>
       <v-toolbar-title>Liquor Store</v-toolbar-title>
       <v-spacer></v-spacer>
