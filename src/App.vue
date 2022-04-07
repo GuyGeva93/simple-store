@@ -4,6 +4,15 @@
     <v-main>
       <router-view></router-view>
     </v-main>
+    <v-snackbar
+      v-model="$store.state.snackbar.show"
+      :top="true"
+      :timeout="5000"
+      :color="$store.state.snackbar.variant"
+      :transition="'slide-y-transition'"
+    >
+      {{ $store.state.snackbar.message }}
+    </v-snackbar>
   </v-app>
 </template>
 
@@ -16,3 +25,11 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+</style>

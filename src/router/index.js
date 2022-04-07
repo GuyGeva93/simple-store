@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import HomePage from '../pages/HomePage.vue';
+import StorePage from '@/pages/StorePage.vue';
 
 Vue.use(VueRouter);
 
@@ -10,11 +11,11 @@ const routes = [
     name: 'home',
     component: HomePage,
   },
-  // {
-  //   path: '/store',
-  //   name: 'store',
-  //   component: HomePage,
-  // },
+  {
+    path: '/store',
+    name: 'store',
+    component: StorePage,
+  },
   // {
   //   path: '/cart',
   //   name: 'cart',

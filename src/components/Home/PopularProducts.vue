@@ -12,14 +12,7 @@
       <v-col sm="10" offset-sm="1" lg="8" offset-lg="2">
         <v-row>
           <v-col sm="6" md="4" v-for="product in products" :key="product.id">
-            <v-card outlined>
-              <v-img :src="product.imgSrc" max-height="10px" contain/>
-              <v-card-title>{{ product.name }}</v-card-title>
-              <v-card-subtitle>{{ product.price }}</v-card-subtitle>
-              <v-card-actions>
-                <v-btn color="success" outlined>Add to cart</v-btn>
-              </v-card-actions>
-            </v-card>
+            <ProductCard :product="product" :addToCart="addToCart" />
           </v-col>
         </v-row>
       </v-col>
@@ -28,11 +21,20 @@
 </template>
 
 <script>
-import products from '@/data/products.js';
+import ProductCard from '@/components/Products/ProductCard.vue';
+import addToCart from '@/mixins/addToCart';
+
 export default {
+  mixins: [addToCart],
+  components: {
+    ProductCard,
+  },
   created() {
-    this.products = products;
-    console.log('products.imgSrc',products[0].imgSrc);
+    try {
+      this.products = this.$store.state.products.slice(0, 3);
+    } catch (e) {
+      console.log(e);
+    }
   },
   data() {
     return {
