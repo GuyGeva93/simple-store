@@ -12,12 +12,14 @@
 <script>
 import ProductCard from '@/components/Products/ProductCard.vue';
 import addToCart from '@/mixins/addToCart';
+import { productService } from '@/services/productService.js';
 
 export default {
   mixins: [addToCart],
   created() {
     try {
-      this.products = this.$store.state.products;
+      // this.products = productService.getProducts();
+       this.products = this.$store.state.products;
     } catch (e) {
       console.log(e);
     }

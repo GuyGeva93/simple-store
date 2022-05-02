@@ -23,6 +23,9 @@ export default {
   components: {
     TopNav,
   },
+  created () {
+    this.$store.commit('getProducts');
+  },
 };
 </script>
 

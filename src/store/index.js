@@ -1,12 +1,11 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import productsList from '@/data/products.js';
-
+import productService from '../services/productService';
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    products: productsList,
+    products: [],
     snackbar: {
       show: false,
       variant: 'success',
@@ -16,6 +15,9 @@ export default new Vuex.Store({
   },
   getters: {},
   mutations: {
+    getProducts(state) {
+      state.products = productService.getProducts();
+    },
     addItemToCart(state, { itemId, quantity }) {
       const idx = state.cart.findIndex((product) => {
         return product.itemId === itemId;
