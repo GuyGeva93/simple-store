@@ -1,5 +1,5 @@
 <template>
-  <v-container class="px-0">
+  <v-container class="px-0 layout">
     <v-app-bar>
       <v-toolbar-title>Liquor Store</v-toolbar-title>
       <v-spacer></v-spacer>
@@ -45,4 +45,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.layout {
+  grid-column: 2;
+}
+</style>
