@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h3>Products</h3>
     <v-row>
       <v-col sm="6" md="4" v-for="product in products" :key="product.id">
         <ProductCard :product="product" :addToCart="addToCart" />
@@ -12,14 +11,12 @@
 <script>
 import ProductCard from '@/components/Products/ProductCard.vue';
 import addToCart from '@/mixins/addToCart';
-import { productService } from '@/services/productService.js';
 
 export default {
   mixins: [addToCart],
   created() {
     try {
-      // this.products = productService.getProducts();
-       this.products = this.$store.state.products;
+      this.products = this.$store.getters.products;
     } catch (e) {
       console.log(e);
     }

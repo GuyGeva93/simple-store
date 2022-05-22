@@ -13,7 +13,11 @@ export default new Vuex.Store({
     },
     cart: [],
   },
-  getters: {},
+  getters: {
+    products(state) {
+      return state.products;
+    },
+  },
   mutations: {
     getProducts(state) {
       state.products = productService.getProducts();
